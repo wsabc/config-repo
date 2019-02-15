@@ -1,2 +1,15 @@
 info:
   profile: dev
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-reg1:8761/eureka,http://eureka-reg2:8762/eureka
+  instance:
+    prefer-ip-address: true
+swagger:
+  enable: true
+
+kdc:
+  warehouse:
+    name: kdc-reception
