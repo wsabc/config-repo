@@ -1,2 +1,2 @@
 # kdc-config-repo
-Key D
+key distribution center - config repo
