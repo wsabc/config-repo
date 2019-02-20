@@ -13,3 +13,9 @@ swagger:
 kdc:
   warehouse:
     name: kdc-reception
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
