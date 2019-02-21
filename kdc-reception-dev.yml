@@ -19,3 +19,8 @@ management:
     web:
       exposure:
         include: hystrix.stream
+
+turbine:
+  appConfig: kdc-reception
+  clusterNameExpression: "'default'"
+  combineHostPort: true
