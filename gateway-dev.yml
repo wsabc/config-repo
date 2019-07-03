@@ -1,0 +1,36 @@
+server:
+  port: 8000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    #以IP地址注册到服务中心,相互注册使用IP地址
+    #eureka.instance.prefer-ip-address=true
+
+zuul:
+  prefix: /api
+  ignored-services: *
+  routes:
+    multiplications:
+      path: /multiplications/**
+      service-id: multiplication
+      strip-prefix: false
+    results:
+      path: /results/**
+      service-id: multiplication
+      strip-prefix: false
+    leaders:
+      path: /leaders/**
+      service-id: gamification
+      strip-prefix: false
+    stats:
+      path: /stats/**
+      service-id: gamification
+      strip-prefix: false
+
+endpoints:
+  trace:
+    sensitive: false
+  routes:
+    sensitive: false
