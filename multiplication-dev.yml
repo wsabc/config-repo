@@ -1,2 +1,27 @@
-info:
-  profile: default
+server:
+  port: 8080
+
+spring:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+  rabbitmq:
+    host: localhost
+  datasource:
+    url: 'jdbc:log4jdbc:h2:file:~/social-multiplication;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE'
+    driver-class-name: net.sf.log4jdbc.DriverSpy
+    username: sa
+    password: ''
+
+multiplication:
+  exchange: multiplication_exchange
+  solved:
+    key: multiplication.solved
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

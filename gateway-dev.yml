@@ -10,7 +10,7 @@ eureka:
 
 zuul:
   prefix: /api
-  ignored-services: "*"
+  ignored-services: '*' # Note * is special in yml
   routes:
     multiplications:
       path: /multiplications/**
