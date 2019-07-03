@@ -8,8 +8,11 @@ multiplication:
   queue: multiplication_queue
   anything:
     routing-key: 'multiplication.*'
+  service-id: multiplication # used for feign
 
-multiplicationHost: http://localhost:8000/api
+multiplicationHost: http://localhost:8080/api #using feign instead
+swagger:
+  enable: true
 
 spring:
   h2:
